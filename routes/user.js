@@ -27,7 +27,7 @@ router.put('/me', auth, upload.single('avatar'), async (req, res) => {
 });
 
 
-// ✅ NEW ROUTE: Get profile with JWT directly from header
+// NEW ROUTE: Get profile with JWT directly from header
 router.get('/profile', async (req, res) => {
   const header = req.headers.authorization;
   if (!header) return res.status(401).json({ msg: 'Token required' });
